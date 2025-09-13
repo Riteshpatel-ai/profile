@@ -12,12 +12,14 @@ const CONFIG = {
     // Typing animation configuration
     typing: {
         texts: [
-            'Full Stack Developer',
-            'Software Engineer', 
-            'React & Node.js Developer',
+            'Software Engineer',
+            'Full Stack Developer', 
+            'Spring Boot Specialist',
+            'Java Backend Engineer',
             'DevOps Engineer',
             'Cloud Solutions Architect',
-            'AI/ML Engineer'
+            'AI/ML Enthusiast',
+            'Problem Solver'
         ],
         typeSpeed: 100,
         deleteSpeed: 50,
