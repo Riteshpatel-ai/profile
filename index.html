@@ -1,0 +1,1039 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ritesh Patel - Software Engineer & DevOps Specialist. Final year CSE student specializing in Full Stack Development, AI/ML, and Cloud Technologies.">
+    <meta name="keywords" content="Software Engineer, DevOps Engineer, Full Stack Developer, AI Engineer, Java Developer, Python Developer, Cloud Computing">
+    <meta name="author" content="Ritesh Patel">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Ritesh Patel | Software Engineer Portfolio">
+    <meta property="og:description" content="Professional portfolio showcasing expertise in Full Stack Development, DevOps, and AI/ML technologies.">
+    <meta property="og:type" content="website">
+    
+    <title>Ritesh Patel | Software Engineer & DevOps Specialist</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💻</text></svg>">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    
+    <!-- Critical CSS - Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous">
+    
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader" id="loader">
+        <div class="loader-content">
+            <div class="logo-loader">
+                <span class="loader-bracket">&lt;</span>
+                <span class="loader-text">RP</span>
+                <span class="loader-bracket">/&gt;</span>
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-message">Initializing Portfolio...</p>
+        </div>
+    </div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+    
+    <!-- Scroll Progress -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+    
+    <!-- Background Particles -->
+    <div id="particles-js"></div>
+    
+    <!-- Background Glow Effects -->
+    <div class="background-glow glow-1"></div>
+    <div class="background-glow glow-2"></div>
+    <div class="background-glow glow-3"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="#home" class="logo-link">
+                    <span class="logo-bracket">&lt;</span>
+                    <span class="logo-text">RP</span>
+                    <span class="logo-bracket">/&gt;</span>
+                </a>
+            </div>
+            
+            <ul class="nav-menu" id="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link active" data-section="home">
+                        <span class="nav-number">01.</span>
+                        <span class="nav-text">Home</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link" data-section="about">
+                        <span class="nav-number">02.</span>
+                        <span class="nav-text">About</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#skills" class="nav-link" data-section="skills">
+                        <span class="nav-number">03.</span>
+                        <span class="nav-text">Skills</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#projects" class="nav-link" data-section="projects">
+                        <span class="nav-number">04.</span>
+                        <span class="nav-text">Projects</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link" data-section="contact">
+                        <span class="nav-number">05.</span>
+                        <span class="nav-text">Contact</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="https://drive.google.com/file/d/1xkl_p6rOn85BE7Hv4xqPUYI8tPqUvskL/view?usp=sharing" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="nav-resume-btn">
+                        <i class="fas fa-download"></i>
+                        Resume
+                    </a>
+                </li>
+            </ul>
+            
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <div class="container">
+                <div class="hero-content">
+                    <!-- Profile Image -->
+                    <div class="hero-profile" data-aos="zoom-in" data-aos-duration="1000">
+                        <div class="profile-wrapper">
+                            <img src="https://i.postimg.cc/LsQZL5j3/20240409103607-IMG-6496.jpg" 
+                                 alt="Ritesh Patel - Software Engineer"
+                                 class="profile-image"
+                                 loading="eager">
+                            <div class="profile-ring"></div>
+                            <div class="profile-dots">
+                                <span class="dot dot-1"></span>
+                                <span class="dot dot-2"></span>
+                                <span class="dot dot-3"></span>
+                            </div>
+                        </div>
+                        <div class="status-indicator">
+                            <span class="status-dot"></span>
+                            <span class="status-text">Available for opportunities</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Hero Text -->
+                    <div class="hero-text">
+                        <h1 class="hero-greeting" data-aos="fade-up" data-aos-delay="200">
+                            Hi, my name is
+                        </h1>
+                        <h2 class="hero-name" data-aos="fade-up" data-aos-delay="400">
+                            Ritesh Patel.
+                        </h2>
+                        <h3 class="hero-tagline" data-aos="fade-up" data-aos-delay="600">
+                            Building scalable solutions with modern technology.
+                        </h3>
+                        
+                        <div class="hero-typing" data-aos="fade-up" data-aos-delay="800">
+                            <span class="typing-prefix">Software Engineer • </span>
+                            <span class="typed-text" id="typed-text"></span>
+                            <span class="typing-cursor">|</span>
+                        </div>
+                        
+                        <p class="hero-description" data-aos="fade-up" data-aos-delay="1000">
+                            Computer Science Engineering student specializing in 
+                            <span class="highlight">Full Stack Development</span>, 
+                            <span class="highlight">DevOps Engineering</span>, and 
+                            <span class="highlight">AI/ML Technologies</span>. 
+                            Passionate about creating efficient, scalable solutions that solve real-world problems.
+                        </p>
+                        
+                        <div class="hero-actions" data-aos="fade-up" data-aos-delay="1200">
+                            <a href="#projects" class="btn btn-primary">
+                                <span>View Projects</span>
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://drive.google.com/file/d/1xkl_p6rOn85BE7Hv4xqPUYI8tPqUvskL/view?usp=sharing" 
+                               target="_blank" 
+                               rel="noopener noreferrer"
+                               class="btn btn-outline">
+                                <span>Download Resume</span>
+                                <i class="fas fa-download"></i>
+                            </a>
+                        </div>
+                        
+                        <div class="hero-social" data-aos="fade-up" data-aos-delay="1400">
+                            <a href="https://github.com/anonymous98400" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="social-link-minimal"
+                               title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ritesh-patel-5725881a1/" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="social-link-minimal"
+                               title="LinkedIn">
+                                <i class="fab fa-linkedin"></i>
+                            </a>
+                            <a href="mailto:Ritesh9878patel@gmail.com" 
+                               class="social-link-minimal"
+                               title="Email">
+                                <i class="fas fa-envelope"></i>
+                            </a>
+                            <a href="https://wa.me/919878124052" 
+                               target="_blank" 
+                               rel="noopener noreferrer" 
+                               class="social-link-minimal whatsapp"
+                               title="WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" data-aos="fade-in" data-aos-delay="2000">
+                <span class="scroll-text">Scroll Down</span>
+                <div class="scroll-line"></div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-number">01.</span>
+                    <h2 class="section-title">About Me</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text" data-aos="fade-right" data-aos-delay="200">
+                        <div class="about-intro">
+                            <p>
+                                Hello! I'm Ritesh, a passionate software engineer and final-year Computer Science student 
+                                with a strong foundation in <span class="text-highlight">full-stack development</span> and 
+                                <span class="text-highlight">DevOps practices</span>.
+                            </p>
+                            <p>
+                                My journey in technology began with curiosity about how things work behind the scenes. 
+                                Today, I specialize in building robust, scalable applications and implementing efficient 
+                                CI/CD pipelines. I'm particularly interested in 
+                                <span class="text-highlight">cloud technologies</span>, 
+                                <span class="text-highlight">artificial intelligence</span>, and 
+                                <span class="text-highlight">automation</span>.
+                            </p>
+                            <p>
+                                When I'm not coding, you'll find me exploring philosophical concepts, staying fit through 
+                                morning exercises and evening runs, or diving deep into the latest tech innovations.
+                            </p>
+                        </div>
+                        
+                        <div class="about-highlights">
+                            <h4>What I'm Currently Up To:</h4>
+                            <ul class="highlight-list">
+                                <li>🎓 Completing my B.Tech in Computer Science Engineering</li>
+                                <li>💻 Intensive DevOps and Java Full Stack training</li>
+                                <li>🤖 Exploring AI/ML applications in real-world projects</li>
+                                <li>🚁 Programming drones for automation and control systems</li>
+                                <li>📚 Studying cloud architecture and microservices</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="about-cards" data-aos="fade-left" data-aos-delay="400">
+                        <div class="info-card education-card">
+                            <div class="card-icon">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <h3>Education</h3>
+                            <div class="card-content">
+                                <p class="degree">B.Tech Computer Science Engineering</p>
+                                <p class="status">Final Year Student</p>
+                                <div class="education-details">
+                                    <h5>Current Focus:</h5>
+                                    <ul>
+                                        <li>DevOps & Java Full Stack Development</li>
+                                        <li>Cloud Computing & Microservices</li>
+                                        <li>AI/ML & Data Structures</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card languages-card">
+                            <div class="card-icon">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h3>Languages</h3>
+                            <div class="card-content">
+                                <div class="language-item">
+                                    <span class="language-name">English</span>
+                                    <span class="language-level">Fluent</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-name">Hindi</span>
+                                    <span class="language-level">Native</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-name">Gujarati</span>
+                                    <span class="language-level">Native</span>
+                                </div>
+                                <div class="language-item">
+                                    <span class="language-name">Hinglish</span>
+                                    <span class="language-level">Preferred</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="info-card interests-card">
+                            <div class="card-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Interests & Values</h3>
+                            <div class="card-content">
+                                <ul class="interests-list">
+                                    <li>
+                                        <i class="fas fa-brain"></i>
+                                        <span>Philosophical Thinking (Vedanta, Bhagavad Gita)</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-dumbbell"></i>
+                                        <span>Health & Fitness</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-robot"></i>
+                                        <span>AI & Tech Innovation</span>
+                                    </li>
+                                    <li>
+                                        <i class="fas fa-running"></i>
+                                        <span>Morning Workouts & Evening Runs</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-number">02.</span>
+                    <h2 class="section-title">Skills & Technologies</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="skills-content">
+                    <div class="skills-grid">
+                        <!-- Programming Languages -->
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="200">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <h3>Programming Languages</h3>
+                            </div>
+                            <div class="skill-items">
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Java</span>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="90"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">Python</span>
+                                        <span class="skill-level">Advanced</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="85"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">JavaScript</span>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="80"></div>
+                                    </div>
+                                </div>
+                                <div class="skill-item">
+                                    <div class="skill-info">
+                                        <span class="skill-name">TypeScript</span>
+                                        <span class="skill-level">Intermediate</span>
+                                    </div>
+                                    <div class="skill-bar">
+                                        <div class="skill-progress" data-width="75"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Frontend Technologies -->
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="400">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-paint-brush"></i>
+                                </div>
+                                <h3>Frontend Development</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">
+                                    <i class="fab fa-react"></i>
+                                    React.js
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fab fa-vuejs"></i>
+                                    Vue.js
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fab fa-html5"></i>
+                                    HTML5
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fab fa-css3-alt"></i>
+                                    CSS3
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fab fa-sass"></i>
+                                    SCSS
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-wind"></i>
+                                    Tailwind CSS
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Backend Technologies -->
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="600">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-server"></i>
+                                </div>
+                                <h3>Backend Development</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">
+                                    <i class="fas fa-leaf"></i>
+                                    Spring Boot
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-leaf"></i>
+                                    Spring Core
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-database"></i>
+                                    Spring Data JPA
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fab fa-node-js"></i>
+                                    Node.js
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-fire"></i>
+                                    Express.js
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-link"></i>
+                                    RESTful APIs
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- DevOps & Cloud -->
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="800">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-cloud"></i>
+                                </div>
+                                <h3>DevOps & Cloud</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">
+                                    <i class="fab fa-docker"></i>
+                                    Docker
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fab fa-jenkins"></i>
+                                    Jenkins
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fab fa-aws"></i>
+                                    AWS
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fab fa-git-alt"></i>
+                                    Git/GitHub
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-dharmachakra"></i>
+                                    Kubernetes
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-terminal"></i>
+                                    CI/CD
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- Databases -->
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="1000">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-database"></i>
+                                </div>
+                                <h3>Databases & Storage</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">
+                                    <i class="fas fa-database"></i>
+                                    MySQL
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-database"></i>
+                                    PostgreSQL
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-leaf"></i>
+                                    MongoDB
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-memory"></i>
+                                    Redis
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-stream"></i>
+                                    Apache Kafka
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <!-- AI/ML & Other -->
+                        <div class="skill-category" data-aos="fade-up" data-aos-delay="1200">
+                            <div class="category-header">
+                                <div class="category-icon">
+                                    <i class="fas fa-brain"></i>
+                                </div>
+                                <h3>AI/ML & Emerging Tech</h3>
+                            </div>
+                            <div class="skill-tags">
+                                <span class="skill-tag">
+                                    <i class="fas fa-robot"></i>
+                                    Machine Learning
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-comments"></i>
+                                    NLP
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-link"></i>
+                                    LangChain
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-microchip"></i>
+                                    IoT Development
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-helicopter"></i>
+                                    Drone Programming
+                                </span>
+                                <span class="skill-tag">
+                                    <i class="fas fa-chart-bar"></i>
+                                    Data Analysis
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-number">03.</span>
+                    <h2 class="section-title">Featured Projects</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <article class="project-card featured" data-aos="fade-up" data-aos-delay="200">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-tech-preview">
+                                <span class="tech-icon"><i class="fas fa-microchip"></i></span>
+                                <span class="tech-icon"><i class="fab fa-arduino"></i></span>
+                                <span class="tech-icon"><i class="fas fa-chart-line"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">ICU Patient Monitoring System</h3>
+                                <div class="project-type">Featured Project</div>
+                            </div>
+                            <p class="project-description">
+                                A comprehensive IoT-based monitoring solution designed for ICU environments. 
+                                The system monitors vital signs of multiple patients simultaneously using cost-effective 
+                                sensors and provides real-time data visualization through ThingSpeak integration. 
+                                Features include alert systems, data logging, and remote monitoring capabilities.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">IoT</span>
+                                <span class="tech-tag">Arduino</span>
+                                <span class="tech-tag">ThingSpeak</span>
+                                <span class="tech-tag">C++</span>
+                                <span class="tech-tag">Real-time Data</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 2 -->
+                    <article class="project-card featured" data-aos="fade-up" data-aos-delay="400">
+                        <div class="project-image">
+                            <div class="project-overlay">
+                                <div class="project-links">
+                                    <a href="#" class="project-link" title="View Live Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link" title="View Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="project-tech-preview">
+                                <span class="tech-icon"><i class="fas fa-robot"></i></span>
+                                <span class="tech-icon"><i class="fab fa-python"></i></span>
+                                <span class="tech-icon"><i class="fas fa-file-pdf"></i></span>
+                            </div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">AI-Powered PDF Summary Chatbot</h3>
+                                <div class="project-type">Featured Project</div>
+                            </div>
+                            <p class="project-description">
+                                An intelligent chatbot that processes PDF documents and generates comprehensive summaries 
+                                using advanced Natural Language Processing. Built with LangChain and integrated with 
+                                modern AI models to provide contextual Q&A capabilities and document insights.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">LangChain</span>
+                                <span class="tech-tag">NLP</span>
+                                <span class="tech-tag">OpenAI</span>
+                                <span class="tech-tag">Streamlit</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 3 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="600">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Advanced Drone Control System</h3>
+                                <div class="project-links-inline">
+                                    <a href="#" class="project-link-small" title="View Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link-small" title="Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Autonomous drone programming system with advanced flight control algorithms, 
+                                obstacle detection, and mission planning capabilities. Includes real-time telemetry 
+                                and computer vision integration for surveillance and mapping applications.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Python</span>
+                                <span class="tech-tag">OpenCV</span>
+                                <span class="tech-tag">Control Systems</span>
+                                <span class="tech-tag">IoT</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 4 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="800">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Microservices E-Commerce Platform</h3>
+                                <div class="project-links-inline">
+                                    <a href="#" class="project-link-small" title="View Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link-small" title="Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Scalable e-commerce platform built with microservices architecture using Spring Boot. 
+                                Features include user authentication, product catalog, order management, and payment processing 
+                                with Docker containerization and CI/CD pipeline integration.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Spring Boot</span>
+                                <span class="tech-tag">Docker</span>
+                                <span class="tech-tag">MySQL</span>
+                                <span class="tech-tag">Redis</span>
+                                <span class="tech-tag">Jenkins</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 5 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="1000">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Cloud Infrastructure Automation</h3>
+                                <div class="project-links-inline">
+                                    <a href="#" class="project-link-small" title="View Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link-small" title="Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Infrastructure as Code (IaC) solution for automated cloud resource provisioning and management. 
+                                Implements best practices for scalability, security, and cost optimization across multiple 
+                                cloud providers with monitoring and alerting systems.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">Terraform</span>
+                                <span class="tech-tag">AWS</span>
+                                <span class="tech-tag">Kubernetes</span>
+                                <span class="tech-tag">Monitoring</span>
+                            </div>
+                        </div>
+                    </article>
+                    
+                    <!-- Project 6 -->
+                    <article class="project-card" data-aos="fade-up" data-aos-delay="1200">
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Real-time Chat Application</h3>
+                                <div class="project-links-inline">
+                                    <a href="#" class="project-link-small" title="View Demo">
+                                        <i class="fas fa-external-link-alt"></i>
+                                    </a>
+                                    <a href="#" class="project-link-small" title="Source Code">
+                                        <i class="fab fa-github"></i>
+                                    </a>
+                                </div>
+                            </div>
+                            <p class="project-description">
+                                Modern real-time messaging application with end-to-end encryption, file sharing, 
+                                and video calling capabilities. Features responsive design, offline message sync, 
+                                and multi-platform support with PWA implementation.
+                            </p>
+                            <div class="project-tech">
+                                <span class="tech-tag">React</span>
+                                <span class="tech-tag">Socket.io</span>
+                                <span class="tech-tag">Node.js</span>
+                                <span class="tech-tag">WebRTC</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="projects-footer" data-aos="fade-up" data-aos-delay="1400">
+                    <a href="https://github.com/anonymous98400" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="btn btn-outline">
+                        <span>View All Projects</span>
+                        <i class="fab fa-github"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <div class="container">
+                <div class="section-header" data-aos="fade-up">
+                    <span class="section-number">04.</span>
+                    <h2 class="section-title">Get In Touch</h2>
+                    <div class="section-line"></div>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-intro" data-aos="fade-up" data-aos-delay="200">
+                        <h3>Let's Create Something Amazing Together</h3>
+                        <p>
+                            I'm always excited to connect with fellow developers, potential collaborators, 
+                            and anyone interested in technology. Whether you have a project in mind, 
+                            want to discuss opportunities, or just want to say hello, I'd love to hear from you!
+                        </p>
+                    </div>
+                    
+                    <div class="contact-grid">
+                        <div class="contact-info" data-aos="fade-right" data-aos-delay="400">
+                            <h4>Get In Touch</h4>
+                            <p>
+                                Interested in collaborating or have questions about my work? 
+                                Let's discuss how we can work together.
+                            </p>
+                            
+                            <div class="contact-methods-modern">
+                                <div class="primary-contact">
+                                    <a href="mailto:Ritesh9878patel@gmail.com" class="contact-primary">
+                                        <i class="fas fa-envelope"></i>
+                                        <span>Ritesh9878patel@gmail.com</span>
+                                    </a>
+                                </div>
+                                
+                                <div class="secondary-contacts">
+                                    <a href="https://www.linkedin.com/in/ritesh-patel-5725881a1/" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       class="contact-secondary">
+                                        <i class="fab fa-linkedin"></i>
+                                        <span>LinkedIn</span>
+                                    </a>
+                                    
+                                    <a href="https://wa.me/919878124052" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       class="contact-secondary whatsapp">
+                                        <i class="fab fa-whatsapp"></i>
+                                        <span>WhatsApp</span>
+                                    </a>
+                                    
+                                    <a href="tel:+919878124052" class="contact-secondary">
+                                        <i class="fas fa-phone"></i>
+                                        <span>Call</span>
+                                    </a>
+                                </div>
+                            </div>
+                                </a>
+                                
+                                <a href="https://github.com/anonymous98400" 
+                                   target="_blank" 
+                                   rel="noopener noreferrer" 
+                                   class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fab fa-github"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <span class="method-label">GitHub</span>
+                                        <span class="method-value">Check out my code</span>
+                                    </div>
+                                </a>
+                                
+                                <div class="contact-method">
+                                    <div class="method-icon">
+                                        <i class="fas fa-map-marker-alt"></i>
+                                    </div>
+                                    <div class="method-info">
+                                        <span class="method-label">Location</span>
+                                        <span class="method-value">India</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <form class="contact-form" id="contactForm" data-aos="fade-left" data-aos-delay="600">
+                            <div class="form-header">
+                                <h4>Send me a message</h4>
+                                <p>I'll get back to you as soon as possible!</p>
+                            </div>
+                            
+                            <!-- EmailJS Setup Status (Hidden) -->
+                            <div class="email-notice hidden" id="emailNotice">
+                                📧 Contact form ready! Complete EmailJS setup to enable direct email delivery to Ritesh9878patel@gmail.com
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="firstName">First Name</label>
+                                    <input type="text" 
+                                           id="firstName" 
+                                           name="firstName" 
+                                           required 
+                                           placeholder="John">
+                                </div>
+                                <div class="form-group">
+                                    <label for="lastName">Last Name</label>
+                                    <input type="text" 
+                                           id="lastName" 
+                                           name="lastName" 
+                                           required 
+                                           placeholder="Doe">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" 
+                                       id="email" 
+                                       name="email" 
+                                       required 
+                                       placeholder="john.doe@example.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">Select a subject</option>
+                                    <option value="collaboration">Collaboration Opportunity</option>
+                                    <option value="job">Job Opportunity</option>
+                                    <option value="project">Project Discussion</option>
+                                    <option value="mentorship">Mentorship</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" 
+                                          name="message" 
+                                          rows="5" 
+                                          required 
+                                          placeholder="Tell me about your project or how we can work together..."></textarea>
+                                <div class="character-count">
+                                    <span id="charCount">0</span> / 500
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn" id="submitBtn">
+                                <span class="btn-text">Send Message</span>
+                                <span class="btn-loading">
+                                    <i class="fas fa-spinner fa-spin"></i>
+                                    Sending...
+                                </span>
+                                <i class="fas fa-paper-plane btn-icon"></i>
+                            </button>
+                            
+                            <div class="form-message" id="formMessage"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float">
+        <a href="https://wa.me/919878124052?text=Hi%20Ritesh!%20I%20found%20your%20portfolio%20and%20would%20like%20to%20connect." 
+           target="_blank" 
+           rel="noopener noreferrer" 
+           class="whatsapp-btn"
+           title="Message me on WhatsApp">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-tooltip">Message me on WhatsApp</span>
+        </a>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>
+                        Designed & Built by 
+                        <span class="footer-highlight">Ritesh Patel</span>
+                    </p>
+                    <p class="footer-copyright">
+                        &copy; 2024 All rights reserved.
+                    </p>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="https://github.com/anonymous98400" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer-social-link"
+                       title="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ritesh-patel-5725881a1/" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer-social-link"
+                       title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="mailto:Ritesh9878patel@gmail.com" 
+                       class="footer-social-link"
+                       title="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                    <a href="tel:+919878124052" 
+                       class="footer-social-link"
+                       title="Call">
+                        <i class="fas fa-phone"></i>
+                    </a>
+                    <a href="https://wa.me/919878124052" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       class="footer-social-link"
+                       title="WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!-- EmailJS for contact form -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
