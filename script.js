@@ -13,9 +13,8 @@ const CONFIG = {
     typing: {
         texts: [
             'Software Engineer',
-            'Full Stack Developer', 
+            'Java Full Stack Developer',
             'Spring Boot Specialist',
-            'Java Backend Engineer',
             'DevOps Engineer',
             'Cloud Solutions Architect',
             'AI/ML Enthusiast',

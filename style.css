@@ -858,68 +858,52 @@ body {
 
 /* Modern Contact Methods */
 .contact-methods-modern {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-6);
+    margin-top: var(--space-4);
 }
 
-.primary-contact {
-    display: flex;
-    justify-content: center;
+.contact-methods-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
 }
 
-.contact-primary {
+.contact-method-card {
     display: flex;
     align-items: center;
     gap: var(--space-3);
-    padding: var(--space-4) var(--space-6);
-    background: rgba(100, 255, 218, 0.1);
-    border: 2px solid rgba(100, 255, 218, 0.3);
+    padding: var(--space-3);
+    background: rgba(100, 255, 218, 0.05);
+    border: 1px solid rgba(100, 255, 218, 0.1);
     border-radius: var(--radius-lg);
-    color: var(--color-primary);
+    transition: var(--transition-base);
     text-decoration: none;
-    font-weight: 600;
-    font-size: var(--font-md);
-    transition: all 0.3s ease;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    color: var(--color-text-primary);
 }
 
-.contact-primary:hover {
-    background: rgba(100, 255, 218, 0.2);
-    border-color: var(--color-primary);
+.contact-method-card:hover {
+    background: rgba(100, 255, 218, 0.1);
+    border-color: rgba(100, 255, 218, 0.2);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(100, 255, 218, 0.3);
 }
 
-.secondary-contacts {
-    display: flex;
-    justify-content: center;
-    gap: var(--space-4);
-    flex-wrap: wrap;
+.contact-method-card i {
+    font-size: var(--font-xl);
+    color: var(--color-accent);
+    width: 24px;
+    text-align: center;
 }
 
-.contact-secondary {
-    display: flex;
-    align-items: center;
-    gap: var(--space-2);
-    padding: var(--space-3) var(--space-4);
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: var(--radius-md);
-    color: var(--color-text-secondary);
-    text-decoration: none;
+.contact-method-card .method-title {
+    display: block;
+    font-weight: var(--font-weight-medium);
+    color: var(--color-text-primary);
+    font-size: var(--font-base);
+}
+
+.contact-method-card .method-desc {
+    display: block;
     font-size: var(--font-sm);
-    transition: all 0.3s ease;
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
-}
-
-.contact-secondary:hover {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: rgba(255, 255, 255, 0.3);
-    color: var(--color-text);
-    transform: translateY(-2px);
+    color: var(--color-text-secondary);
 }
 
 .contact-secondary.whatsapp {
@@ -1787,14 +1771,14 @@ section {
 
 .contact-intro {
     text-align: center;
-    margin-bottom: var(--space-12);
+    margin-bottom: var(--space-8);
 }
 
 .contact-intro h3 {
     color: var(--color-text-white);
     font-size: var(--font-2xl);
     font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-2);
 }
 
 .contact-intro p {
@@ -1810,19 +1794,99 @@ section {
     grid-template-columns: 1fr 1fr;
     gap: var(--space-10);
     align-items: start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+}
+
+.contact-intro-left {
+    margin-bottom: var(--space-4);
+}
+
+.contact-intro-left h3 {
+    color: var(--color-text-white);
+    font-size: var(--font-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--space-3);
+}
+
+.contact-intro-left p {
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    font-size: var(--font-lg);
 }
 
 .contact-info h4 {
     color: var(--color-text-white);
     font-size: var(--font-xl);
     font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-4);
+    margin-bottom: var(--space-3);
 }
 
 .contact-info > p {
     color: var(--color-text-secondary);
     line-height: 1.6;
-    margin-bottom: var(--space-8);
+    margin-bottom: var(--space-5);
+}
+
+.contact-highlights {
+    margin-bottom: var(--space-5);
+}
+
+.contact-highlights h5 {
+    color: var(--color-text-white);
+    font-size: var(--font-lg);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-3);
+}
+
+.contact-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-2) 0;
+    color: var(--color-text-secondary);
+    font-size: var(--font-sm);
+}
+
+.contact-list li i {
+    color: var(--color-accent);
+    width: 16px;
+    text-align: center;
+}
+
+.response-time {
+    margin-bottom: var(--space-5);
+}
+
+.response-time h5 {
+    color: var(--color-text-white);
+    font-size: var(--font-lg);
+    font-weight: var(--font-weight-medium);
+    margin-bottom: var(--space-2);
+}
+
+.response-time p {
+    color: var(--color-text-secondary);
+    font-size: var(--font-sm);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.response-time i {
+    color: var(--color-accent);
 }
 
 .contact-methods {
@@ -2092,7 +2156,11 @@ section {
 @media (max-width: 768px) {
     .contact-grid {
         grid-template-columns: 1fr;
-        gap: var(--space-8);
+        gap: var(--space-6);
+    }
+
+    .contact-intro-left {
+        margin-bottom: var(--space-4);
     }
 
     .form-row {
