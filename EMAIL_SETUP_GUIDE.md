@@ -25,7 +25,7 @@ Your portfolio contact form is now integrated with EmailJS to send messages dire
 
 **Subject Line:**
 ```
-New Portfolio Contact: {{subject}}
+Portfolio Contact: {{subject}}
 ```
 
 **Email Body:**
@@ -35,8 +35,8 @@ Hello Ritesh,
 You have received a new message from your portfolio website!
 
 ---
-👤 From: {{from_name}}
-📧 Email: {{from_email}}
+👤 From: {{user_name}}
+📧 Email: {{user_email}}
 📋 Subject: {{subject}}
 
 💬 Message:
@@ -46,10 +46,45 @@ You have received a new message from your portfolio website!
 📅 Received: {{current_date}}
 🌐 Sent from: your-portfolio-website.com
 
-Reply directly to this email to respond to {{from_name}}.
+Reply directly to this email to respond to {{user_name}}.
 ```
 
 4. Save the template and copy the **Template ID** (e.g., `template_abc456`)
+
+## 🔧 IMPORTANT: Fix "From" and "To" Email Issue
+
+### Problem
+If your emails show the same "from" and "to" address, update your template variables:
+
+### Quick Fix Steps:
+1. **Go to EmailJS Dashboard** → **Email Templates**
+2. **Find your template:** `template_vioytzq`
+3. **Click "Edit"**
+4. **Replace old variables with new ones:**
+   - Change `{{from_name}}` → `{{user_name}}`
+   - Change `{{from_email}}` → `{{user_email}}`
+   - Keep `{{subject}}` and `{{message}}` the same
+
+### Updated Template Example:
+```
+Subject: Portfolio Contact: {{subject}}
+
+Hello Ritesh,
+
+New message from your portfolio:
+
+From: {{user_name}}
+Email: {{user_email}}
+Subject: {{subject}}
+
+Message:
+{{message}}
+
+---
+Reply to: {{user_email}}
+```
+
+5. **Click "Save"** in EmailJS dashboard
 
 ### Step 4: Get Your Public Key
 1. Go to **Account** → **General**

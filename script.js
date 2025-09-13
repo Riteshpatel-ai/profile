@@ -652,10 +652,11 @@ class ContactManager {
         this.messageTextarea = utils.getElement('#message');
         
         // EmailJS Configuration - Replace these with your actual EmailJS credentials
+        // See EMAIL_SETUP_GUIDE.md for detailed setup instructions
         this.emailConfig = {
-            publicKey: 'YOUR_EMAILJS_PUBLIC_KEY',
-            serviceId: 'YOUR_EMAILJS_SERVICE_ID',
-            templateId: 'YOUR_EMAILJS_TEMPLATE_ID'
+            publicKey: '50CiieQxzEkJn7-Nz',     // Get from EmailJS Account > General
+            serviceId: 'service_802mujo',     // Get from EmailJS Email Services
+            templateId: 'template_vioytzq'    // Get from EmailJS Email Templates
         };
         
         if (this.form) {
@@ -682,12 +683,10 @@ class ContactManager {
         const emailNotice = utils.getElement('#emailNotice');
         if (emailNotice) {
             if (this.isEmailJSConfigured()) {
-                emailNotice.innerHTML = '✅ Email functionality active! Messages will be sent to Ritesh9878patel@gmail.com';
-                emailNotice.style.background = 'rgba(34, 197, 94, 0.1)';
-                emailNotice.style.borderColor = 'rgba(34, 197, 94, 0.3)';
-                emailNotice.style.color = '#22c55e';
+                // Hide the notice since EmailJS is properly configured
+                emailNotice.classList.add('hidden');
             } else {
-                emailNotice.innerHTML = '📧 Contact form ready! Complete EmailJS setup to enable direct email delivery to Ritesh9878patel@gmail.com';
+                emailNotice.classList.add('hidden');
             }
         }
     }
@@ -772,13 +771,14 @@ class ContactManager {
             // Send email using EmailJS if configured
             if (typeof emailjs !== 'undefined' && this.isEmailJSConfigured()) {
                 await this.sendEmailViaEmailJS(data);
+                this.showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
             } else {
-                // Fallback: Log form data (for development/testing)
+                // EmailJS not configured - inform user
                 console.log('EmailJS not configured. Form data:', data);
                 await new Promise(resolve => setTimeout(resolve, 1500)); // Simulate delay
+                this.showMessage('Thank you for your message! I will get back to you soon. You can also reach me directly at Ritesh9878patel@gmail.com', 'success');
             }
             
-            this.showMessage('Message sent successfully! I\'ll get back to you soon.', 'success');
             this.form.reset();
             
             // Reset character count
@@ -802,11 +802,11 @@ class ContactManager {
 
     async sendEmailViaEmailJS(formData) {
         const templateParams = {
-            from_name: `${formData.firstName} ${formData.lastName}`,
-            from_email: formData.email,
+            user_name: `${formData.firstName} ${formData.lastName}`,
+            user_email: formData.email,
             subject: formData.subject,
             message: formData.message,
-            to_email: 'Ritesh9878patel@gmail.com',
+            to_name: 'Ritesh Patel',
             reply_to: formData.email
         };
 
