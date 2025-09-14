@@ -56,35 +56,66 @@ Reply directly to this email to respond to {{user_name}}.
 ### Problem
 If your emails show the same "from" and "to" address, update your template variables:
 
-### Quick Fix Steps:
-1. **Go to EmailJS Dashboard** → **Email Templates**
-2. **Find your template:** `template_vioytzq`
-3. **Click "Edit"**
-4. **Replace old variables with new ones:**
-   - Change `{{from_name}}` → `{{user_name}}`
-   - Change `{{from_email}}` → `{{user_email}}`
-   - Keep `{{subject}}` and `{{message}}` the same
+### ✅ **MAIN TEMPLATE CONFIGURATION** (template_vioytzq)
 
-### Updated Template Example:
+**Subject Line:**
 ```
-Subject: Portfolio Contact: {{subject}}
+New inquiry from {{name}}: {{subject}}
+```
 
+**Email Body:**
+```
 Hello Ritesh,
 
-New message from your portfolio:
+You have received a new message via the Contact Us form on your website.
 
-From: {{user_name}}
-Email: {{user_email}}
+Details:
+Name: {{name}}
+Email: {{email}}
+Submitted At: {{time}}
 Subject: {{subject}}
 
 Message:
 {{message}}
 
----
-Reply to: {{user_email}}
+Please respond to the sender at {{email}} at your earliest convenience.
 ```
 
-5. **Click "Save"** in EmailJS dashboard
+### ✅ **AUTO-REPLY TEMPLATE CONFIGURATION** (template_92vcqga)
+
+**Subject:**
+```
+Thank you for contacting Ritesh Patel
+```
+
+**Email Body:**
+```
+Dear {{name}},
+
+Thank you for reaching out to me via the Contact Form on my website.
+
+I have successfully received your message with the subject "{{subject}}" submitted on {{time}}. I will review your inquiry and respond to you at your email address ({{email}}) as soon as possible, typically within 24 hours.
+
+If you have any additional questions, please feel free to reply to this email.
+
+Best regards,
+Ritesh Patel
+Software Engineer
+```
+
+### ⚙️ **EmailJS Dashboard Settings:**
+
+1. **Main Template (template_vioytzq):**
+   - **To Email:** ritesh9878patel@gmail.com
+   - **From Name:** {{name}}
+   - **From Email:** {{email}} 
+   - **Reply To:** {{email}}
+
+2. **Auto-Reply Template (template_92vcqga):**
+   - **To Email:** {{email}}
+   - **From Name:** Ritesh Patel
+   - **From Email:** ritesh9878patel@gmail.com
+   - **Reply To:** ritesh9878patel@gmail.com
 
 ### Step 4: Get Your Public Key
 1. Go to **Account** → **General**

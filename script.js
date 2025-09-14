@@ -802,11 +802,11 @@ class ContactManager {
 
     async sendEmailViaEmailJS(formData) {
         const templateParams = {
-            user_name: `${formData.firstName} ${formData.lastName}`,
-            user_email: formData.email,
+            name: `${formData.firstName} ${formData.lastName}`,
+            email: formData.email,
             subject: formData.subject,
             message: formData.message,
-            to_name: 'Ritesh Patel',
+            time: new Date().toLocaleString(),
             reply_to: formData.email
         };
 
@@ -815,6 +815,19 @@ class ContactManager {
             this.emailConfig.templateId,
             templateParams
         );
+
+        // Send auto-reply to the user
+        try {
+            await emailjs.send(
+                this.emailConfig.serviceId,
+                'template_92vcqga', // Auto-reply template ID
+                templateParams
+            );
+            console.log('Auto-reply sent successfully');
+        } catch (autoReplyError) {
+            console.log('Auto-reply failed (non-critical):', autoReplyError);
+            // Don't throw error for auto-reply failure
+        }
 
         console.log('Email sent successfully:', response);
         return response;
