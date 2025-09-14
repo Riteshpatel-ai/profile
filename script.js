@@ -14,11 +14,10 @@ const CONFIG = {
         texts: [
             'Software Engineer',
             'Java Full Stack Developer',
-            'Spring Boot Specialist',
+            'Spring Boot Backend Specialist',
             'DevOps Engineer',
-            'Cloud Solutions Architect',
             'AI/ML Enthusiast',
-            'Problem Solver'
+            'Analytical Problem Solver'
         ],
         typeSpeed: 100,
         deleteSpeed: 50,
