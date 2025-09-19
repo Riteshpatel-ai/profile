@@ -503,6 +503,44 @@ class ScrollManager {
                 }
             });
         }
+
+        // Scroll to top button functionality
+        const scrollToTopBtn = utils.getElement('#scrollToTop');
+        if (scrollToTopBtn) {
+            // Show/hide button based on scroll position
+            const toggleButtonVisibility = utils.throttle(() => {
+                const scrollTop = window.pageYOffset;
+                if (scrollTop > 300) {
+                    scrollToTopBtn.classList.add('visible');
+                } else {
+                    scrollToTopBtn.classList.remove('visible');
+                }
+            }, 100);
+
+            // Scroll to top when button is clicked
+            scrollToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ 
+                    top: 0, 
+                    behavior: 'smooth' 
+                });
+            });
+
+            // Show/hide button on scroll
+            window.addEventListener('scroll', toggleButtonVisibility);
+        }
+
+        // Make scroll indicator clickable to scroll to about section
+        const scrollIndicator = utils.getElement('.scroll-indicator');
+        if (scrollIndicator) {
+            scrollIndicator.addEventListener('click', () => {
+                const aboutSection = utils.getElement('#about');
+                if (aboutSection) {
+                    aboutSection.scrollIntoView({ 
+                        behavior: 'smooth' 
+                    });
+                }
+            });
+        }
     }
 }
 
