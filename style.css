@@ -1825,7 +1825,7 @@ section {
     color: var(--color-text-white);
     font-size: var(--font-xl);
     font-weight: var(--font-weight-semibold);
-    margin-bottom: var(--space-3);
+    margin-bottom: var(--space-4);
 }
 
 .contact-info > p {
@@ -2128,12 +2128,6 @@ section {
     color: #22c55e;
 }
 
-.form-message.warning {
-    background: rgba(245, 158, 11, 0.1);
-    border: 1px solid rgba(245, 158, 11, 0.3);
-    color: #f59e0b;
-}
-
 .form-message.error {
     background: rgba(239, 68, 68, 0.1);
     border: 1px solid rgba(239, 68, 68, 0.3);
@@ -2165,8 +2159,8 @@ section {
         gap: var(--space-6);
     }
 
-    .contact-intro-left {
-        margin-bottom: var(--space-4);
+    .contact-intro {
+        margin-bottom: var(--space-6);
     }
 
     .form-row {
